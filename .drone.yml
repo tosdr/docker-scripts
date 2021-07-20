@@ -1,12 +1,17 @@
 ---
 kind: pipeline
-name: default
+name: push
 
 steps:
 - name: test
   image: alpine
   commands:
   - echo "It works!"
+  
+
+trigger:
+  event:
+  - push
   
 ---
   
