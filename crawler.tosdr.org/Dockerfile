@@ -1,5 +1,6 @@
 # NAME:		jbackpcat/tosdr-crisp
 # VERSION: DEVELOPMENT
+# IMPORTANT: Build from Repository Root!
 FROM debian:buster-slim
 
 # Accept Environment Variables, set defaults
@@ -18,7 +19,7 @@ ENV ALLOWED_MIME "text/plain,text/html,application/pdf"
 
 # Add our Scripts
 
-ADD start.sh /start.sh
+ADD crawler.tosdr.org/start.sh /start.sh
 RUN chmod +x /start.sh
 
 # Bootstrap the image
