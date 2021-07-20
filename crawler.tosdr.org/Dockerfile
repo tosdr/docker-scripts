@@ -18,7 +18,7 @@ ENV ALLOWED_MIME "text/plain,text/html,application/pdf"
 
 # Add our Scripts
 
-ADD ./start.sh /start.sh
+ADD start.sh /start.sh
 RUN chmod +x /start.sh
 
 # Bootstrap the image
