@@ -1,5 +1,5 @@
 # Crawler Docker
-
+Docker Image to easily deploy ToS;DR Crawlers.
 
 
 ## Run 
