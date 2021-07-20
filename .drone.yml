@@ -23,7 +23,7 @@ steps:
 - name: tags
   image: alpine
   commands:
-  - echo -n ${tags:-latest} > .tags
+  - if [[ -v tags ]]; then echo -n $tags > .tags; else echo latest > .tags; fi
 
 - name: amd64
   image: plugins/docker
