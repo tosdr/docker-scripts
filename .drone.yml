@@ -21,10 +21,9 @@ name: crawler.tosdr.org
 steps:
 
 - name: tags
-  image: alpine
+  image: debian:buster-slim
   commands:
-  - apk add bash
-  - /bin/bash if [[ -v tags ]]; then echo -n $tags > .tags; fi
+  - if [[ -v tags ]]; then echo -n $tags > .tags; fi
 
 - name: amd64
   image: plugins/docker
