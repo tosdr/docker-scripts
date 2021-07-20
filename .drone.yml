@@ -29,3 +29,8 @@ steps:
         from_secret: jbackpcat_password
     repo: jbackpcat/crawler.tosdr.org
     dockerfile: crawler.tosdr.org/Dockerfile
+
+
+trigger:
+  target:
+  - crawler.tosdr.org
