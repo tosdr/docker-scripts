@@ -1,4 +1,15 @@
 kind: pipeline
+name: default
+type: docker
+
+steps:
+- name: test
+  image: alpine
+  commands:
+  - echo "It works!"
+  
+---
+  
 name: crawler.tosdr.org
 type: docker
 
