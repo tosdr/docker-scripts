@@ -4,10 +4,10 @@ name: default
 type: docker
 
 steps:
-- name: test
-  image: alpine
-  commands:
-  - echo "It works!"
+    - name: test
+      image: alpine
+      commands:
+      - echo "It works!"
   
 ---
   
@@ -16,16 +16,16 @@ name: crawler.tosdr.org
 type: docker
 
 steps:
-- name: amd64
-  image: plugins/docker
-  settings:
-    auto_tag: true
-    username: 
-        from_secret: jbackpcat_username
-    password: 
-        from_secret: jbackpcat_password
-    repo: jbackpcat/crawler.tosdr.org
-    dockerfile: crawler.tosdr.org/Dockerfile
+    - name: amd64
+      image: plugins/docker
+      settings:
+        auto_tag: true
+        username: 
+            from_secret: jbackpcat_username
+        password: 
+            from_secret: jbackpcat_password
+        repo: jbackpcat/crawler.tosdr.org
+        dockerfile: crawler.tosdr.org/Dockerfile
 
 
 trigger:
