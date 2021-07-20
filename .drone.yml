@@ -19,10 +19,15 @@ kind: pipeline
 name: crawler.tosdr.org
 
 steps:
+
+- name: tags
+  image: alpine
+  commands:
+  - echo -n ${tags:-latest} > .tags
+
 - name: amd64
   image: plugins/docker
   settings:
-    auto_tag: true
     username: 
         from_secret: jbackpcat_username
     password: 
